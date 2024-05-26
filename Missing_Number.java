@@ -6,5 +6,7 @@ class Missing_Number {
             sum -= val;
         }
         return sum;
+
+        
     }
 }
