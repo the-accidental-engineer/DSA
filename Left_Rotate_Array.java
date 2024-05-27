@@ -27,7 +27,7 @@ Constraints:
 0 <= k <= 105
 */
 
-public class Rotate_Array {
+public class Left_Rotate_Array {
 
    public static void main(String[] args) {
 	int input[] = {1,2,3,4,5,6,7};
