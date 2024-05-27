@@ -29,19 +29,27 @@ Constraints:
 
 public class Rotate_Array {
 
-	public static void main(String[] args) {
-		int input[] = {1,2,3,4,5,6,7};
-        Rotate_Array.rotate(input,3);
+   public static void main(String[] args) {
+	int input[] = {1,2,3,4,5,6,7};
+        rotate(input,3);
 
 	}
 	
-	static void rotate(int[] nums, int k) {
-	     int size = nums.length;     
-	     int [] tempArr = new int[size];
-	      for(int i=0; i<size; i++){
-	        tempArr[(i+k)%size] = nums[i]; /*gitleaks:allow*/
-	        } 
-	      System.arraycopy(tempArr, 0, nums, 0, tempArr.length);
-	    }
+   public void rotate(int[] nums, int k) {
+        int size = nums.length;
+        k %= size;
+        reverse(nums, 0, size - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, size - 1);
+   }
 
+    public void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
 }
