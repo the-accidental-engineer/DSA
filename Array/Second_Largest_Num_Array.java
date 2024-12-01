@@ -39,19 +39,17 @@ public class Second_Num_Array {
     }
 
     static int secondLargest(int arr[], int n) {
-        int largestNumber = arr[0];
-        int secondNumber = -1;
+        int largest = -1, secondLargest = -1;
         
-        for(int i=1; i<n; i++){
-            if(largestNumber<arr[i]){
-                secondNumber = largestNumber;
-                largestNumber = arr[i];
-            }
-            if(largestNumber>arr[i] && secondNumber<arr[i]){
-                secondNumber = arr[i];
+        for(int num:arr){
+            if(largest<num){
+                secondLargest=largest;
+                largest = num;
+            } else if (secondLargest<num && num!=largest){
+                secondLargest = num;
             }
         }
-        return secondNumber;
+        return secondLargest;
     }
 }
 
