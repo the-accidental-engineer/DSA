@@ -4,24 +4,24 @@ import java.util.List;
 
 public class ArrayUtil {
 
+    public void ArrayDemo() {
+        int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // Declare and Intialization
+        printArray(reverseArray(arr));
+    }
+
     public void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
 
-    public void ArrayDemo() {
-        int[] arr = new int[] { 1, 2, 3, 4 }; // Declare and Intialization
-        printArray(removeEven(arr));
+    public void printEvenUsingList() {
+        List.of(12, 34, 67, 19, 32, 4)
+                .stream()
+                .filter(element -> element % 2 == 0)
+                .forEach(
+                        element -> System.out.println(element));
     }
-
-    // public void printEven (){
-    // List.of(12, 34, 67, 19, 32, 4)
-    // .stream()
-    // .filter(element -> element % 2 == 0)
-    // .forEach(
-    // element -> System.out.println(element));
-    // }
 
     public void printEven(int[] arr) {
         for (int num : arr) {
@@ -49,6 +49,19 @@ public class ArrayUtil {
         }
         return result;
 
+    }
+
+    public int[] reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length-1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        return arr;
     }
 
     public static void main(String[] args) {
