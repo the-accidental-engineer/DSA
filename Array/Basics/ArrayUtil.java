@@ -12,7 +12,7 @@ public class ArrayUtil {
 
     public void ArrayDemo() {
         int[] arr = new int[] { 1, 2, 3, 4 }; // Declare and Intialization
-        printEven(arr);
+        printArray(removeEven(arr));
     }
 
     // public void printEven (){
@@ -29,6 +29,26 @@ public class ArrayUtil {
                 System.out.print(num + " ");
             }
         }
+    }
+
+    public int[] removeEven(int[] arr) {
+        int oddCount = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                oddCount++;
+            }
+        }
+        int[] result = new int[oddCount];
+        int j = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                result[j] = arr[i];
+                j++;
+            }
+
+        }
+        return result;
+
     }
 
     public static void main(String[] args) {
