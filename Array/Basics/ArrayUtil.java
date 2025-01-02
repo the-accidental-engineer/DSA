@@ -1,5 +1,7 @@
 package Basics;
 
+import java.util.List;
+
 public class ArrayUtil {
 
     public void printArray (int[] arr){
@@ -13,8 +15,16 @@ public class ArrayUtil {
         printArray(arr);
     }
 
+    public void printEven (){
+        List.of(12, 34, 67, 19, 32, 4)
+        .stream()
+        .filter(element -> element % 2 == 0)
+        .forEach(
+            element -> System.out.println(element));
+    }
+
     public static void main (String[] args){
         ArrayUtil arrUtil = new ArrayUtil ();
-        arrUtil.dummyArray(); 
+        arrUtil.printEven(); 
     }
 }
