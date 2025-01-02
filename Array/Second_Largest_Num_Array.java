@@ -30,11 +30,11 @@ Constraints:
 1 ≤ Arri ≤ 105 
 */
 
-public class Second_Num_Array {
+public class Second_Largest_Num_Array {
 
     public static void main(String[] args) {
         int input[] = {1, 8, 7, 56, 90};
-        System.out.println("Result :" + Second_Num_Array.secondLargest(input, input.length));
+        System.out.println("Result :" + Second_Largest_Num_Array.secondLargest(input, input.length));
 
     }
 
