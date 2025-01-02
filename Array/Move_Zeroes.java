@@ -26,24 +26,28 @@ Constraints:
 Follow up: Could you minimize the total number of operations done?
 */
 
+import java.util.Arrays;
+
 public class Move_Zeroes {
 
     public static void main(String[] args) {
-        int input[] = {1, 8, 7, 56, 90};
-        System.out.println("Result :" + Move_Zeroes.secondLargest(input, input.length));
+        int input[] = { 1, 0, 0, 0, 7, 56, 90 };
+        System.out.println("Result :" + Arrays.toString(Move_Zeroes.moveZeroes(input)));
 
     }
 
-static void moveZeroes(int[] nums) {
-    if (nums.length > 1) {
-        int left = 0;
-        for (int right = 0; right < nums.length; right++) {
-            if (nums[right] != 0) {
-                int temp = nums[right];
-                nums[right] = nums[left];
-                nums[left] = temp;
-                left++;
+    static int[] moveZeroes(int[] nums) {
+        if (nums.length > 1) {
+            int left = 0;
+            for (int right = 0; right < nums.length; right++) {
+                if (nums[right] != 0) {
+                    int temp = nums[right];
+                    nums[right] = nums[left];
+                    nums[left] = temp;
+                    left++;
+                }
             }
         }
+        return nums;
     }
 }
