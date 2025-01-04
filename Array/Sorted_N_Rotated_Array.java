@@ -36,7 +36,7 @@ public class Sorted_N_Rotated_Array {
 
     public static void main(String[] args) {
         int input[] = {3,4,5,1,2};
-        System.out.println("Result :" + Sorted_N_Rotated_Array.check(input);
+        System.out.println("Result :" + Sorted_N_Rotated_Array.check(input));
 
     }
 
