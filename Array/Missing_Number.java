@@ -35,7 +35,7 @@ public class Missing_Number {
 
     public static void main(String[] args) {
         int input[] = {9,6,4,2,3,5,7,0,1};
-        System.out.println("Result :" + Missing_Number.missingNumber(input);
+        System.out.println("Result :" + Missing_Number.missingNumber(input));
 
     }
 
