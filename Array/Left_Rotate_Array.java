@@ -30,9 +30,10 @@ Constraints:
 public class Left_Rotate_Array {
 
    public static void main(String[] args) {
+    Left_Rotate_Array run = new Left_Rotate_Array();
 	int input[] = {1,2,3,4,5,6,7};
-        rotate(input,3);
-
+    run.rotate(input,4);
+    run.printArray(input);
 	}
 	
    public void rotate(int[] nums, int k) {
@@ -52,4 +53,12 @@ public class Left_Rotate_Array {
             end--;
         }
     }
+
+    public void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+
 }
