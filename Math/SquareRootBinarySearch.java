@@ -27,7 +27,7 @@ public class SquareRootBinarySearch {
     }
 
     public static void main(String[] args) {
-        int number = 9; // Input number
+        int number = 10; // Input number
         double precision = 0.0001; // Desired precision for the square root
 
         double squareRoot = findSquareRoot(number, precision);
