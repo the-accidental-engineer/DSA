@@ -10,6 +10,7 @@ public class ResizeArray {
     }
 
     public int [] ResizeArrayFunction(int[] arr, int newCapacity){
+        //return Arrays.copyOfRange(arr, 0, newCapacity);
         int [] temp = new int[newCapacity];
         for(int i=0; i<newCapacity; i++){
             temp[i] = arr[i];
