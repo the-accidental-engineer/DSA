@@ -36,7 +36,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 import java.util.Arrays;
 
 class TwoSum {
-
+    //Two Pointer work only with sorted array.
     public static int[] twoSumTwoPointer(int[] arr, int target) {
         int start = 0, end = arr.length-1;
         while (start < end) {
